@@ -41,6 +41,8 @@ python llm/final_llm_select.py
 python llm/process_rank_select.py
 ```
 
+Hint: remember to specify your own OpenAI API key in arguments --api_key.
+
 
 
 ## Section 4: Evaluation
