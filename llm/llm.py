@@ -4,37 +4,8 @@ import openai
 class MyLLM:
     def __init__(self) -> None:
         self.client = openai.OpenAI(
-            # 1
-            # api_key="sk-fT1m1AETAsXEhrHCiVWKUhrYFFZWIhvIGu00Lq6flYaxV8MU", # 0.32元
-            # base_url='https://api.chatanywhere.com.cn/v1'
-
-            # 2
-            # api_key="sk-mfLt9ayK2HELuCzgCJrwxKBkeTzxprsakjeO3Wevh0LFf9wN",    # 0.48元
-            # base_url='https://api.chatanywhere.com.cn/v1'
-
-            # 3 已用完
-            # api_key="sk-TYdp0kwohNDC4s2Dde8vjUFrH685YqKFP9mP8G1Ps29M5xXI",
-            # base_url='https://guoke.huiyan-ai.com/v1/'
-
-            # 4
-            # api_key="sk-Ycy7gxsn40RIrn3TwZAypTgcPD0LnH01BlwMUMzJzhiNkz6y",    # 0.14元
-            # base_url='https://api.chatanywhere.com.cn/v1'
-
-            # 5
-            # api_key="sk-98bJQqDWKkD83ZMmrNWHHPGswwrMF1gI6NEblU1JjPZarpSs",    # 0.09元
-            # base_url='https://api.chatanywhere.com.cn/v1'
-
-            # 6
-            # api_key="sk-RPgN3YE90hqWiIKbldwj84pWaQu4dhR8lFOSK3BQkXFpaAE5",    # 14.60元
-            # base_url='https://api.chatanywhere.com.cn/v1'
-
-            # 7
-            # api_key="sk-GYnlRXnG0IDLv3J3coirGlvRd26vQABA94h3dhFmsbUI4su3",    # 92.08元
-            # base_url='https://api.chatanywhere.com.cn/v1'
-
-            # 8
-            api_key="sk-o4Jg3g3UrFeCLYlG2kTOAxgPzRp7y7xYMAcuDWnT6WJiY9UZ",  # 93.39元
-            base_url='https://api.chatanywhere.com.cn/v1'
+            api_key="sk-*",
+            base_url='*'
         )
     
     
@@ -46,7 +17,6 @@ class MyLLM:
         response = self.client.chat.completions.create(
             model=model,  #选择的GPT模型名称
             messages=conversation
-            # temperature=0.7,
         )
         result = response.choices[0].message.content
         return result
@@ -64,7 +34,6 @@ class MyLLM:
             response = self.client.chat.completions.create(
                 model=model,  #选择的GPT模型名称
                 messages=conversation
-                # temperature=0.7,
             )
             txt = response.choices[0].message.content
             info.append(txt)
@@ -101,7 +70,6 @@ class MyLLM:
         response = self.client.chat.completions.create(
             model=model,  #选择的GPT模型名称
             messages=conversation
-            # temperature=0.7,
         )
         result = response.choices[0].message.content
         return result, prompt
