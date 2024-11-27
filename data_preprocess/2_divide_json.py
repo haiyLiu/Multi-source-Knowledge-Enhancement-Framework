@@ -29,9 +29,9 @@ def split_json(input_file, output_prefix, chunk_size, output_dir):
 if __name__ == '__main__':
 
     # 示例调用
-    input_file = '/home/kayla/lhy/code/multi-source/data/WN18RR/test.txt.json'  # 大JSON文件的路径
+    input_file = 'data/WN18RR/test.txt.json'  # 大JSON文件的路径
     output_prefix = 'test'    # 输出小文件的前缀
-    output_dir = "/home/kayla/lhy/code/multi-source/data/WN18RR/small_test" # 输出文件所在的文件夹
+    output_dir = "data/WN18RR/small_test" # 输出文件所在的文件夹
     chunk_size = 100               # 每个小文件包含的条目数
 
     if not os.path.exists(output_dir):
